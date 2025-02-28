@@ -1,138 +1,138 @@
-# Claude 3.7 Sonnet Extended Thinking Notebooks
+# Claude 3.7 Sonnet 拡張思考ノートブック
 
-This repository contains a comprehensive set of notebooks and materials designed to teach you how to effectively use Claude 3.7 Sonnet's extended thinking capabilities. These tutorials were designed to be used with Claude 3.7 Sonnet in Amazon Bedrock, but many of the concepts can be applied to other deployment methods.
+このリポジトリには、Claude 3.7 Sonnet の拡張思考機能を効果的に使用する方法を教える包括的なノートブックと資料のセットが含まれています。これらのチュートリアルは Amazon Bedrock の Claude 3.7 Sonnet で使用するように設計されていますが、概念の多くは他の展開方法にも適用できます。
 
-## Workshop Overview
+## ワークショップの概要
 
-Claude 3.7 Sonnet introduces a groundbreaking **extended thinking** capability that allows the model to work through complex problems methodically. These notebooks will guide you through understanding, configuring, and leveraging this powerful feature across various use cases.
+Claude 3.7 Sonnet は、モデルが複雑な問題を系統的に処理できるようにする画期的な **拡張思考** 機能を導入しています。これらのノートブックは、さまざまなユースケースでこの強力な機能を理解、構成、および活用するためのガイドとなります。
 
-## Prerequisites
+## 前提条件
 
-- An AWS account with access to Amazon Bedrock
-- Access to Claude 3.7 Sonnet in your region
-- Basic understanding of Python and Jupyter notebooks
-- Familiarity with LLM prompting concepts
+- Amazon Bedrock にアクセスできる AWS アカウント
+- リージョン内の Claude 3.7 Sonnet にアクセスできる
+- Python と Jupyter ノートブックの基本的な理解
+- LLM プロンプトの概念に精通している
 
-## Setup Instructions
+## セットアップ手順
 
-1. Clone this repository:
+1. このリポジトリをクローンします:
    ```bash
    git clone https://github.com/aws-samples/anthropic-on-aws.git
    cd claude_3_7_extended_thinking
    ```
 
-2. Set up your Python environment:
+2. Python 環境をセットアップします:
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
-3. Configure your AWS credentials for Bedrock access:
+3. Bedrock アクセス用に AWS 認証情報を設定します:
    ```bash
    aws configure
    ```
 
-4. Start Jupyter to access the notebooks:
+4. Jupyter を起動してノートブックにアクセスします:
    ```bash
    jupyter lab
    ```
 
-## Workshop Content
+## ワークショップの内容
 
-The workshop consists of 8 lessons that progressively build your understanding of Claude 3.7's extended thinking capability:
+ワークショップは、Claude 3.7 の拡張思考機能について段階的に理解を深める 8 つのレッスンで構成されています:
 
-### Lesson 1: Introduction to Claude 3.7 and Extended Thinking
-- Overview of Claude 3.7 Sonnet's capabilities
-- Understanding extended thinking and how it differs from previous approaches
-- Basic setup with the Bedrock API in Python
-- Simple examples comparing standard mode vs. extended thinking mode
+### レッスン 1: Claude 3.7 と拡張思考の紹介
+- Claude 3.7 Sonnet の機能の概要
+- 拡張思考と、以前のアプローチとの違いを理解する
+- Python での Bedrock API の基本設定
+- 標準モードと拡張思考モードを比較する簡単な例
 
-### Lesson 2: When and How to Use Extended Thinking
-- Task complexity classification framework
-- Decision tree for when to use extended thinking
-- Examples of appropriate use cases vs. cases where it's unnecessary
-- Performance benchmarking on different task types
+### レッスン 2: 拡張思考をいつ、どのように使用するか
+- タスクの複雑さの分類フレームワーク
+- 拡張思考を使用するタイミングの決定木
+- 適切な使用例と不要な場合の例
+- さまざまなタスク タイプでのパフォーマンス ベンチマーク
 
-### Lesson 3: Optimizing Reasoning Budget Allocation
-- Building on the "Optimizing_Cost_vs_Performance" approach
-- Implementing dynamic reasoning budget allocation
-- Visualizing the tradeoffs between budget, time, and quality
-- Creating a reusable Python class for adaptive reasoning
+### レッスン 3: 推論予算の割り当ての最適化
+- 「コストとパフォーマンスの最適化」アプローチの構築
+- 動的な推論予算の割り当ての実装
+- 予算、時間、品質のトレードオフの視覚化
+- 適応型のための再利用可能な Python クラスの作成推論
 
-### Lesson 4: Effective Prompting Techniques for Extended Thinking
-- General vs. step-by-step instruction patterns
-- Implementing N-shot prompting with extended thinking
-- Techniques to control reasoning depth and scope
-- Creating a prompt template library for different use cases
+### レッスン 4: 拡張思考のための効果的なプロンプト手法
+- 一般的な指示パターンと段階的な指示パターン
+- 拡張思考による N ショット プロンプトの実装
+- 推論の深さと範囲を制御する手法
+- さまざまなユース ケース用のプロンプト テンプレート ライブラリの作成
 
-### Lesson 5: Tool Use Integration with Extended Thinking
-- Understanding the extended thinking + tool use pattern
-- Implementing sequential reasoning then tool calling
-- Building multi-step workflows that combine reasoning and tools
-- Error handling and recovery strategies
+### レッスン 5: 拡張思考によるツール使用の統合
+- 拡張思考 + ツール使用パターンの理解
+- シーケンシャル推論の実装とツール呼び出し
+- 推論とツールを組み合わせたマルチステップ ワークフローの構築
+- エラー処理と回復戦略
 
-### Lesson 6: Generating Comprehensive Content and Long-Form Output
-- Techniques to generate longer, more detailed responses
-- Using outlines and structured planning in extended thinking
-- Generating detailed data sets and tables
-- Managing and validating long outputs
+### レッスン 6: 包括的なコンテンツと長い形式の出力の生成
+- より長く詳細な応答を生成する手法
+- 拡張思考におけるアウトラインと構造化計画の使用
+- 詳細なデータ セットと表の生成
+- 長い出力の管理と検証
 
-### Lesson 7: Complex Problem-Solving with Claude 3.7
-- Tackling constraint optimization problems
-- Applying multiple analytical frameworks sequentially
-- Building solutions for STEM problems (math, physics, computer science)
-- Implementing approaches for handling complexity in different domains
+### レッスン 7: Claude 3.7 による複雑な問題解決
+- 制約最適化問題への取り組み
+- 複数の分析フレームワークのシーケンシャルな適用
+- STEM 問題 (数学、物理学、コンピューター サイエンス)
+- さまざまなドメインで複雑性を処理するためのアプローチの実装
 
-### Lesson 8: Migrating Workloads to Claude 3.7
-- Transitioning from previous Claude models
-- Refactoring existing prompts for Claude 3.7
-- Best practices for prompt simplification
-- Removing chain-of-thought guidance when using extended thinking
+### レッスン 8: ワークロードを Claude 3.7 に移行する
+- 以前の Claude モデルからの移行
+- Claude 3.7 用に既存のプロンプトをリファクタリングする
+- プロンプトを簡素化するためのベスト プラクティス
+- 拡張思考を使用する際の思考の連鎖ガイダンスの削除
 
-## Utility Module
+## ユーティリティ モジュール
 
-The repository includes a `claude_utils.py` module that provides helper functions for:
-- Creating and managing Bedrock clients
-- Invoking Claude with extended thinking
-- Displaying and analyzing responses
-- Working with tools
-- Content validation and analysis
+リポジトリには、次のヘルパー関数を提供する `claude_utils.py` モジュールが含まれています。
+- Bedrock クライアントの作成と管理
+- 拡張思考による Claude の呼び出し
+- 応答の表示と分析
+- ツールの操作
+- コンテンツの検証と分析
 
-## Key Concepts
+## 主要な概念
 
-### The Extended Thinking Mental Model
+### 拡張思考のメンタル モデル
 
-Extended thinking can be thought of as giving Claude a "scratchpad" to work through complex problems step by step, similar to how you might use scratch paper when solving a difficult math problem. Instead of trying to respond immediately, Claude can:
+拡張思考は、難しい数学の問題を解くときにメモ用紙を使用するのと同じように、Claude に複雑な問題を段階的に解くための「メモ帳」を与えるものと考えることができます。すぐに応答しようとする代わりに、Claude は次のことができます。
 
-1. First think through the problem methodically
-2. Explore different approaches and possibilities
-3. Validate intermediate results
-4. Arrive at a well-reasoned final answer
+1. まず問題を系統的に考える
+2. さまざまなアプローチと可能性を模索する
+3. 中間結果を検証する
+4. 十分に根拠のある最終回答に到達する
 
-### The Reasoning Budget
+### 推論予算
 
-The "reasoning budget" is the amount of tokens allocated to Claude's extended thinking process:
-- Minimum: 1,024 tokens
-- Recommended for complex tasks: 4,096-8,192 tokens
-- Maximum: Up to 128,000 tokens (in preview)
+「推論予算」は、Claude の拡張思考プロセスに割り当てられるトークンの量です。
+- 最小: 1,024 トークン
+- 複雑なタスクに推奨: 4,096～8,192 トークン
+- 最大: 最大 128,000 トークン (プレビュー)
 
-Think of the reasoning budget like allocating CPU time to a computational task. More complex problems benefit from larger budgets, but there are diminishing returns beyond a certain point.
+推論予算は、CPU 時間を計算タスクに割り当てるようなものと考えてください。より複雑な問題では、より大きな予算が役立ちますが、ある時点を超えると収穫逓減が起こります。
 
-## Contributing
+## 貢献
 
-We welcome contributions to improve these materials! Please submit issues or pull requests if you have suggestions, corrections, or enhancements.
+これらの資料を改善するための貢献を歓迎します。提案、修正、または機能強化がある場合は、問題またはプル リクエストを送信してください。
 
-## License
+## ライセンス
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+このプロジェクトは MIT ライセンスの下でライセンスされています。詳細については、LICENSE ファイルを参照してください。
 
-## Acknowledgments
+## 謝辞
 
-- The Anthropic team for developing Claude 3.7 Sonnet
-- The AWS Bedrock team for making Claude available through Bedrock
-- All contributors to this workshop material
+- Claude 3.7 Sonnet を開発してくれた Anthropic チーム
+- Bedrock を通じて Claude を利用できるようにしてくれた AWS Bedrock チーム
+- このワークショップ資料に貢献してくれたすべての方々
 
 ---
 
-Happy exploring with Claude 3.7's extended thinking capabilities!
+Claude 3.7 の拡張思考機能で楽しい探索をお楽しみください。
